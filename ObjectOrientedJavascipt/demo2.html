@@ -1,0 +1,28 @@
+<html>
+<script>
+var myEmployee={
+	empId:1001,
+	empName:"Pankush",
+	empDep:"Java",
+	isAdmin:false,
+	empSalary:4500.88,
+	address:{
+		street:"MG-Road",
+		city:"Pune",
+		pincode:410017
+	}
+};
+console.log(myEmployee);
+console.log(myEmployee["empId"]);
+console.log(myEmployee.address); //add address will print
+console.log(myEmployee["address"]["city"]);
+delete myEmployee.empDep;
+
+var productCode={"121":"Mobile","11":"Rice","9":"Pencil"};
+for(code in productCode){
+	console.log(code); //key
+	console.log(productCode[code]); //value
+	console.log(code,productCode[code]); //key value
+}
+</script>
+</html>

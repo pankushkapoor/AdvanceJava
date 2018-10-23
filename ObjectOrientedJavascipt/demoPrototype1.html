@@ -1,0 +1,37 @@
+<html>
+<script>
+function Employee(firstName, lastName, basicSalary){
+	this.firstName = firstName;
+	this.lastName = lastName;
+	this.basicSalary = basicSalary;
+	this.hra = 0;
+	this.da = 0;
+	this.ta = 0;
+	this.totalSalary = 0;
+	this.fullName = function(){
+		return this.firstName + " " + this.lastName;
+	}
+	this.calculateTotalSalary = ()=>{
+		this.hra = this.basicSalary*10/100;
+		this.ta = this.basicSalary*8/100;
+		this.da = this.basicSalary*7/100;
+		this.totalSalary = this.basicSalary + this.hra + this.da + this.ta;
+		return this.totalSalary;
+	} 
+}
+	//console.log(Employee)
+	Employee.prototype.email="default@gmail.com" //Employee prototype
+	Employee.prototype.fullName = function(){
+		return this.firstName + " Kumarr " + this.lastName;
+	}
+var employee1 = new Employee('Satish', 'Mahajan', 15000);
+console.log(employee1);
+employee1.email = "pank@gmail.com";
+console.log(employee1.email);
+console.log(employee1.fullName() + ' ' + employee1.calculateTotalSalary());
+var employee2 = new Employee('Kumar', 'Raj', 10000);
+console.log(employee2.email);
+console.log(employee2.fullName());
+
+</script>
+</html>

@@ -1,0 +1,41 @@
+<html>
+<script>
+function Employee(firstName, lastName, basicSalary){
+	this.firstName = firstName;
+	this.lastName = lastName;
+	this.basicSalary = basicSalary;
+	this.hra = 0;
+	this.da = 0;
+	this.ta = 0;
+	this.totalSalary = 0;
+}
+	Employee.prototype.email="default@gmail.com" //Employee prototype
+	Employee.prototype.fullName = function(){
+		return this.firstName + " Kumarr " + this.lastName;
+	}
+function PEmployee(firstName, lastName, basicSalary){
+	this.hra = 0;
+	this.da = 0;
+	this.ta = 0;
+	//this.firstName = firstName;
+	Employee.call(this.firstName, lastName, basicSalary)
+	this.calculateTotalSalary = function(){
+		this.hra = this.basicSalary*10/100;
+		this.ta = this.basicSalary*8/100;
+		this.da = this.basicSalary*7/100;
+		this.totalSalary = this.basicSalary + this.hra + this.da + this.ta;
+		return this.totalSalary;
+	}
+}
+var pemp1 = new PEmployee('Satish', 'Mahajan', 15000);
+PEmployee.prototype.email = "default@gmail.com";
+
+PEmployee.prototype.fullName = function(){
+		return this.firstName + " a a  " + this.lastName;
+	}
+console.log(pemp1.email);
+//console.log(pemp1.firstName + ' ' + pemp1.lastName + ' ' + pemp1.calculateTotalSalary());
+console.log(pemp1.fullName() + ' ' + pemp1.calculateTotalSalary());
+var employee2 = new Employee('Kumar', 'Raj', 10000);
+</script>
+</html>

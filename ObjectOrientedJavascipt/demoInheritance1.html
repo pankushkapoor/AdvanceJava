@@ -1,0 +1,19 @@
+<html>
+<script>
+function Employee(name){
+	this.name = name;
+}
+Employee.prototype.getName = function(){return this.name}
+
+function Department(name, manager){
+	this.name=name;
+	this.manager = manager;
+}
+Department.prototype = new Employee("COE"); //copying the prototype of employee to department 
+//Department.prototype.getManagerName = function(){return this.manager}
+var dep = new Department("C","Pank");
+var dep1 = new Department();
+console.log(dep.getName()+" "+dep.getManagerName());
+console.log(dep1.getName()+" "+dep1.getManagerName());
+</script>
+</html>

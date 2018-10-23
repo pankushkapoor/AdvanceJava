@@ -1,0 +1,31 @@
+<html>
+<script>
+//var data = '{"name":"Pankush", "age":22}';
+//var dataparsed = JSON.parse(data);
+//console.log(dataparsed.name);
+//console.log(dataparsed.age);
+
+//var data = '{"name":"Kap","age":30,"address":{"streetAddress":"Pimpri","city":"Pune"},"phoneNumber":[{"type":"home","number":"111 111-1111"},{"type":"tax","number":"222 222-2222"}]}';
+//var json = JSON.parse(data);
+
+//console.log(json["name"]);
+//console.log(json.name);
+
+//console.log(json.address.streetAddress);
+//console.log(json["address"].city);
+
+//console.log(json.phoneNumber[0].number);
+//console.log(json.phoneNumber[1].type);
+
+//console.log(json.phoneNumber.number); //undefined
+function Employee(name, age, salary){
+	this.Name = name;
+	this.age = age;
+	this.salary = salary;
+}
+var employeeObject = new Employee('Panku',22,40000);
+console.log(employeeObject);
+JSON.stringify(employeeObject);
+console.log(employeeObject)
+</script>
+</html>
